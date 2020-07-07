@@ -42,7 +42,6 @@ include 'gto-support-viewpager'
 // deprecated modules
 include 'gto-support-databinding'
 include 'gto-support-design'
-include 'gto-support-gson'
 include 'gto-support-lifecycle'
 include 'gto-support-room'
 include 'gto-support-stetho'
