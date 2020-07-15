@@ -3,6 +3,9 @@ package org.ccci.gto.android.common.db;
 import android.content.ContentValues;
 import android.database.Cursor;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+
 import org.ccci.gto.android.common.compat.util.LocaleCompat;
 import org.ccci.gto.android.common.db.util.CursorUtils;
 import org.json.JSONArray;
@@ -11,9 +14,6 @@ import org.json.JSONObject;
 import java.math.BigDecimal;
 import java.util.Date;
 import java.util.Locale;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 
 public abstract class AbstractMapper<T> implements Mapper<T> {
     /**
@@ -27,74 +27,6 @@ public abstract class AbstractMapper<T> implements Mapper<T> {
      */
     protected final boolean getBool(@NonNull final Cursor c, @NonNull final String field, final boolean defValue) {
         return CursorUtils.getBool(c, field, defValue);
-    }
-
-    /**
-     * @deprecated Since v3.3.0, use CursorUtils.getDouble() or CursorUtils.getNonNullDouble() directly.
-     */
-    @Deprecated
-    protected final double getDouble(@NonNull final Cursor c, @NonNull final String field) {
-        return org.ccci.gto.android.common.util.database.CursorUtils.getDouble(c, field, 0d);
-    }
-
-    /**
-     * @deprecated Since v3.3.0, use CursorUtils.getDouble() or CursorUtils.getNonNullDouble() directly.
-     */
-    @Deprecated
-    protected final double getDouble(@NonNull final Cursor c, @NonNull final String field, final double defValue) {
-        return org.ccci.gto.android.common.util.database.CursorUtils.getDouble(c, field, defValue);
-    }
-
-    /**
-     * @deprecated Since v3.3.0, use CursorUtils.getInt() or CursorUtils.getNonNullInt() directly.
-     */
-    @Deprecated
-    protected final int getInt(@NonNull final Cursor c, @NonNull final String field) {
-        return org.ccci.gto.android.common.util.database.CursorUtils.getInt(c, field, 0);
-    }
-
-    /**
-     * @deprecated Since v3.3.0, use CursorUtils.getInt() or CursorUtils.getNonNullInt() directly.
-     */
-    @Deprecated
-    protected final int getInt(@NonNull final Cursor c, @NonNull final String field, final int defValue) {
-        return org.ccci.gto.android.common.util.database.CursorUtils.getNonNullInt(c, field, defValue);
-    }
-
-    /**
-     * @deprecated Since v3.3.0, use CursorUtils.getLong() or CursorUtils.getNonNullLong() directly.
-     */
-    @Deprecated
-    protected final long getLong(@NonNull final Cursor c, @NonNull final String field) {
-        return org.ccci.gto.android.common.util.database.CursorUtils.getLong(c, field, 0L);
-    }
-
-    /**
-     * @deprecated Since v3.3.0, use CursorUtils.getLong() or CursorUtils.getNonNullLong() directly.
-     */
-    @Deprecated
-    @Nullable
-    protected final Long getLong(@NonNull final Cursor c, @NonNull final String field, @Nullable final Long defValue) {
-        return org.ccci.gto.android.common.util.database.CursorUtils.getLong(c, field, defValue);
-    }
-
-    /**
-     * @deprecated Since v3.3.0, use CursorUtils.getString() or CursorUtils.getNonNullString() directly.
-     */
-    @Deprecated
-    @Nullable
-    protected final String getString(@NonNull final Cursor c, @NonNull final String field) {
-        return org.ccci.gto.android.common.util.database.CursorUtils.getString(c, field);
-    }
-
-    /**
-     * @deprecated Since v3.3.0, use CursorUtils.getString() or CursorUtils.getNonNullString() directly.
-     */
-    @Deprecated
-    @Nullable
-    protected final String getString(@NonNull final Cursor c, @NonNull final String field,
-                                     @Nullable final String defValue) {
-        return org.ccci.gto.android.common.util.database.CursorUtils.getString(c, field, defValue);
     }
 
     @Nullable

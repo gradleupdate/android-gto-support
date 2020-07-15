@@ -2,6 +2,9 @@ package org.ccci.gto.android.common.db.util;
 
 import android.database.Cursor;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+
 import org.jetbrains.annotations.Contract;
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -9,9 +12,6 @@ import org.json.JSONObject;
 import java.math.BigDecimal;
 import java.util.Date;
 import java.util.Locale;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 
 public final class CursorUtils {
     /**
@@ -34,24 +34,6 @@ public final class CursorUtils {
             }
         }
         return defValue;
-    }
-
-    /**
-     * @deprecated Since v3.3.0,
-     * use {@link org.ccci.gto.android.common.util.database.CursorUtils#getDouble(Cursor, String)} instead.
-     */
-    @Deprecated
-    public static double getDouble(@NonNull final Cursor c, @NonNull final String field) {
-        return org.ccci.gto.android.common.util.database.CursorUtils.getDouble(c, field, 0d);
-    }
-
-    /**
-     * @deprecated Since v3.3.0,
-     * use {@link org.ccci.gto.android.common.util.database.CursorUtils#getDouble(Cursor, String)} instead.
-     */
-    @Deprecated
-    public static double getDouble(@NonNull final Cursor c, @NonNull final String field, final double defValue) {
-        return org.ccci.gto.android.common.util.database.CursorUtils.getDouble(c, field, defValue);
     }
 
     @Nullable
