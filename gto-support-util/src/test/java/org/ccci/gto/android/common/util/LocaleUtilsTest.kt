@@ -1,10 +1,10 @@
 package org.ccci.gto.android.common.util
 
+import java.util.Locale
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNotNull
 import org.junit.Assert.assertNull
 import org.junit.Test
-import java.util.Locale
 
 class LocaleUtilsTest {
     @Test

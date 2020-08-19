@@ -2,12 +2,12 @@ package org.ccci.gto.android.common.util.os
 
 import android.os.Bundle
 import androidx.test.ext.junit.runners.AndroidJUnit4
+import java.util.Locale
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNull
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.robolectric.annotation.Config
-import java.util.Locale
 
 private const val KEY1 = "key1"
 private const val KEY2 = "key2"

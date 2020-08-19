@@ -4,9 +4,9 @@ package org.ccci.gto.android.common.util.os
 
 import android.os.Bundle
 import android.os.Parcelable
+import java.util.Locale
 import org.ccci.gto.android.common.compat.util.LocaleCompat
 import org.jetbrains.annotations.Contract
-import java.util.Locale
 
 // region Enums
 
